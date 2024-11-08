@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div align="center">
     <img alt="Status Page" src="https://cdn.herrtxbias.net/status-page/logo_gray/logo_small.png"></a>
 </div>
@@ -60,3 +61,6 @@ See their [License](https://www.notion.so/Tailwind-UI-License-644418bb34ad4fa29a
 ### NetBox
 As you may have noticed, the base structure for many parts of the app is derived
 from [NetBox](https://github.com/netbox-community/netbox), this made development much easier.
+=======
+# status-page
+>>>>>>> 6e8e2ec037e621393b3a4861bd7830b0b135b179
