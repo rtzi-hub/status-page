@@ -1,0 +1,77 @@
+Description of the Terraform Work
+This Terraform project is designed to automate the deployment of a highly available, scalable infrastructure in AWS. The infrastructure includes:
+
+VPC (Virtual Private Cloud): A logically isolated section of AWS, with public and private subnets, where all other resources such as EKS, RDS, and a Load Balancer reside.
+EKS (Elastic Kubernetes Service): Managed Kubernetes clusters used for container orchestration.
+RDS (Relational Database Service): A managed PostgreSQL database.
+IAM (Identity and Access Management): Ensures secure access to AWS resources through role-based access policies.
+Load Balancer: Distributes incoming application traffic across multiple targets, ensuring high availability.
+Components and Purpose:
+1. VPC (Virtual Private Cloud):
+Purpose: A dedicated network environment that houses all AWS resources. It includes both public and private subnets for resource segregation.
+Public Subnets: Used for resources that need to be accessible from the internet, such as the Load Balancer.
+Private Subnets: Used for internal resources like the RDS database and EKS worker nodes, which should not be directly accessible from the internet.
+2. Security Groups:
+Security groups act as virtual firewalls, controlling inbound and outbound traffic for AWS resources. Below are the security groups created and their purposes:
+
+a. EKS Node Security Group (eks_node_sg):
+
+Purpose: Controls the traffic for EKS worker nodes.
+Ingress:
+Typically allows traffic from the Kubernetes control plane (EKS master) and Load Balancer to the worker nodes over ports used by Kubernetes (e.g., 443, 10250).
+Egress:
+Allows outbound internet traffic, so worker nodes can download updates or communicate with other AWS services, such as S3.
+b. RDS Security Group (db_SG):
+
+Purpose: Restricts access to the RDS database to only necessary traffic.
+Ingress:
+Only allows traffic from the EKS worker nodes or application containers within the private subnets over PostgreSQL's default port (5432).
+Egress:
+Allows unrestricted outbound traffic for the RDS instance to reach other AWS services as needed.
+c. Application Security Group (app_security_group):
+
+Purpose: Controls traffic for the Load Balancer that routes requests to the application running on EKS.
+Ingress:
+Allows HTTP (port 80) and HTTPS (port 443) traffic from the internet to the Load Balancer.
+Egress:
+Allows outgoing traffic from the Load Balancer to application instances (EKS nodes).
+3. EKS (Elastic Kubernetes Service):
+Purpose: Orchestrates containerized applications using Kubernetes. It manages the control plane, while the worker nodes are provisioned within private subnets.
+EKS Cluster Security Group: Controls communication between the EKS control plane and worker nodes.
+IAM Roles for EKS:
+EKS Cluster Role: Grants permissions to manage the cluster control plane.
+EKS Node Group Role: Grants permissions for worker nodes to communicate with other AWS services (like ECR and CloudWatch).
+4. RDS (Relational Database Service):
+Purpose: Deploys a managed PostgreSQL database instance inside private subnets for improved security. The RDS instance is not publicly accessible and only accepts connections from approved sources (e.g., EKS worker nodes via the security group).
+RDS Security Group: Ensures that only the EKS worker nodes can connect to the RDS instance.
+5. IAM (Identity and Access Management):
+Purpose: Manages access and permissions for AWS resources.
+EKS Cluster Role and Policies:
+Manages the EKS control plane.
+EKS Node Group Role and Policies:
+Allows worker nodes to communicate with AWS services (S3, ECR, CloudWatch).
+Load Balancer IAM Role and Policies:
+Manages ELB (Elastic Load Balancer) with necessary permissions for Elastic Load Balancing and EC2.
+6. Load Balancer:
+Purpose: Distributes incoming HTTP traffic across the EKS worker nodes, improving fault tolerance and scalability.
+Security Group for Load Balancer: Controls inbound traffic from the internet and outbound traffic to EKS worker nodes.
+Flow and Purpose of Security Groups:
+EKS Node Security Group:
+
+Allows traffic between the Kubernetes control plane and worker nodes.
+Ensures that only necessary services communicate with the EKS worker nodes.
+Provides isolation between worker nodes and other components (e.g., RDS) by allowing only relevant traffic.
+RDS Security Group:
+
+Isolates the database by allowing only inbound connections from EKS worker nodes, improving security by limiting access to the database.
+Application Security Group (Load Balancer):
+
+Exposes the application to the public via HTTP/HTTPS traffic.
+Ensures that the Load Balancer routes traffic securely to internal EKS worker nodes running application containers.
+Summary of Workflow:
+VPC: Provides a secure network environment with segregated public and private subnets.
+EKS: Manages the deployment of containerized applications and orchestrates communication between Kubernetes control plane and worker nodes.
+RDS: Hosts a PostgreSQL database in private subnets, accessible only to approved application containers on EKS.
+IAM: Ensures secure, role-based access to AWS resources for EKS and RDS.
+Load Balancer: Distributes HTTP traffic across EKS worker nodes for high availability.
+This entire infrastructure is designed for secure, scalable, and highly available deployment of applications in AWS using Terraform.
