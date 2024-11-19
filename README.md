@@ -95,14 +95,6 @@ Enter [terraform/jenkins](Terraform/Jenkins) and follow the instructions.
 
 #### Navigate to **ArgoCD Directories**:
 
-1. **Argo App Manager**:
-   - Contains YAML manifests for deploying Kubernetes resources.
-2. **Argo Start**:
-   - Key file: `my-app-of-apps.yaml`.
+Enter [terraform/jenkins](Terraform/Jenkins) and follow the instructions.
 
-#### Deploy ArgoCD Applications:
-
-1. Apply the **`my-app-of-apps.yaml`** configuration:
-   ```bash
-   kubectl apply -f argocd-start/my-app-of-apps.yaml
-   ```
+---
