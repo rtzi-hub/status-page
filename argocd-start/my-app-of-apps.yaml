@@ -13,6 +13,6 @@ spec:
   project: default
   source:
     repoURL: https://github.com/yair232/status-page.git
-    path: argo-app-manager
+    path: argo-apps
     targetRevision: HEAD
   syncPolicy: {}
