@@ -124,7 +124,7 @@ pipeline {
                 script {
                     echo "Logging into EKS cluster and installing Argo CD using cluster-install-argocd.sh..."
                 }
-                dir('Jenkins') {
+                dir('Jenkins/Scripts') {
                     sh '''
                     chmod +x cluster-install-argocd.sh
                     ./cluster-install-argocd.sh
