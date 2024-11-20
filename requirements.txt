@@ -8,7 +8,7 @@ django-mptt==0.16.0
 django-otp-yubikey==1.1.0
 django-otp==1.5.0
 django-redis==5.4.0
-django-rq==2.10.2
+django-rq==3.0.0
 django-tables2==2.7.0
 Django==4.2.15
 django-browser-reload==1.12.1
