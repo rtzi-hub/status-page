@@ -1,9 +1,0 @@
-commit 91123dc034efdf742b7fcb033d0b85a5da7467aa
-tree 9c736f9726f80c8808073458b611a69d50a66892
-parent 0b1da339b2dacb6fa9cfcaf7138c46368f25e0ca
-author rtzi-hub <ron.tzidky@nitzanim.tech> 2024-10-17 03:11:06 +0300
-committer GitHub <noreply@github.com> 2024-10-17 03:11:06 +0300
-
-    Update Jenkinsfile
-
-:100644 100644 f155e2e30ae5cd9f55e694e726859d97a9ae10b6 e95879404e145c06ea6f75e0c7c5de5df5fce8c8 M	final-project-terraform/Jenkinsfile

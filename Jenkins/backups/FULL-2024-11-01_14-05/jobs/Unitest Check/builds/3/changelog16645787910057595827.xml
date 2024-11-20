@@ -1,9 +1,0 @@
-commit cb29f294a81e21f9bda2f2c4344c809f2cb26df3
-tree 3770f39afa8f18a5d0f350d522ec25605be96dcb
-parent 952d4380ab5e04cfb2c57e8ef4fb43254c72f9b6
-author rtzi-hub <ron.tzidky@nitzanim.tech> 2024-10-21 19:12:51 +0300
-committer GitHub <noreply@github.com> 2024-10-21 19:12:51 +0300
-
-    Update main.tf
-
-:100644 100644 761bcfc961d33dab5eca72a0b268a275f49606a4 67fb2913014a2f7e44afb7ac9ad783bca6192f63 M	final-project-terraform/final-project-jenkins-ec2/main.tf
