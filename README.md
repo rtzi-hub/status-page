@@ -79,15 +79,15 @@ This repository contains the implementation of a **highly available, scalable, a
 
 To deploy and operate the infrastructure, follow these steps:
 
-### Step 1: Initialize Terraform for Jenkins EC2
+### Step 1: Initialize Terraform
 
-Enter [terraform](Terraform/README.md) and follow the instructions.
+Enter [terraform](Terraform) and follow the instructions.
 
 ---
 
-### Step 2: Restore the Jenkins Backup
+### Step 2: Jenkins
 
-Enter [terraform/jenkins](Terraform/Jenkins) and follow the instructions.
+Enter [terraform/jenkins](TerraformJenkins) and follow the instructions.
 
 ---
 
@@ -95,6 +95,6 @@ Enter [terraform/jenkins](Terraform/Jenkins) and follow the instructions.
 
 #### Navigate to **ArgoCD Directories**:
 
-Enter [terraform/jenkins](Terraform/Jenkins) and follow the instructions.
+Enter [argocd-start](argocd-start) and follow the instructions.
 
 ---
