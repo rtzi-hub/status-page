@@ -28,7 +28,7 @@ pipeline {
                     echo "Logging into EKS cluster and installing Argo CD using cluster-install-argocd.sh..."
                 }
                 sh '''
-                cd final-project-terraform/Jenkins/
+                cd Jenkins/Scripts
                 ls -la
                 chmod +x cluster-install-argocd.sh
                 ./cluster-install-argocd.sh
