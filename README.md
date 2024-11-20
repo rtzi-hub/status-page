@@ -5,7 +5,6 @@
 <p align="center">
     <a href="https://github.com/Status-Page/Status-Page/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/Status-Page/Status-Page"></a>
     <a href="https://github.com/Status-Page/Status-Page/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Status-Page/Status-Page"></a>
-    <a href="https://github.com/Status-Page/Status-Page/releases"><img alt="GitHub latest release" src="https://img.shields.io/github/release/Status-Page/Status-Page"></a>
 </p>
 
 # High Availability and Scalability Infrastructure
