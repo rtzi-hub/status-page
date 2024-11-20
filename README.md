@@ -87,7 +87,7 @@ Enter [terraform](Terraform) and follow the instructions.
 
 ### Step 2: Jenkins
 
-Enter [terraform/jenkins](TerraformJenkins) and follow the instructions.
+Enter [Jenkins](Jenkins) and follow the instructions.
 
 ---
 
