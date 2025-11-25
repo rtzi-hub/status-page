@@ -16,7 +16,7 @@
 This repository contains the implementation of a **highly available, scalable, and production-grade infrastructure** for a Django-based web application. The architecture integrates **Jenkins for CI**, **Terraform for infrastructure provisioning**, and **ArgoCD for continuous delivery**, ensuring efficient deployments, robust scalability, and streamlined workflows.
 
 ### Key Features
-
+ 
 1. **CI/CD Workflow:**
 
    - **Continuous Integration (CI):**
