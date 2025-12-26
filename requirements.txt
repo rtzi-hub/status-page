@@ -1,6 +1,6 @@
 Markdown==3.6
 pillow==10.3.0
-PyYAML==6.0.1
+PyYAML==6.0.2
 bleach==6.1.0
 django-filter==24.2
 django-formtools==2.5.1
