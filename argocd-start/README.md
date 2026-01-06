@@ -68,7 +68,7 @@ To ensure Argo CD can access the GitHub repository and Helm charts for Prometheu
 Log in to the Argo CD UI and navigate to Settings > Repositories.
 Click Connect Repo using HTTPS.
 Enter the following details:
-- Repository URL: https://github.com/yair232/status-page
+- Repository URL: https://github.com/rtzi-hub/status-page
 - Username: Your GitHub username.
 - Password/Token: A GitHub personal access token with repo permissions.
 Click Save.
