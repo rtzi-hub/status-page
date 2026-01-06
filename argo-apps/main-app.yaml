@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    repoURL: https://github.com/yair232/status-page.git
+    repoURL: https://github.com/rtzi-hub/status-page.git
     path: k8s/app
     targetRevision: HEAD
   syncPolicy:
