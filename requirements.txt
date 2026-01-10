@@ -22,7 +22,7 @@ netaddr==1.2.1
 phonenumbers==8.13.37
 psycopg2-binary==2.9.9
 pysvg-py3==0.2.2.post3
-rq-scheduler==0.13.1
+rq-scheduler==0.14.0
 segno==1.6.1
 swagger-spec-validator==3.0.3
 typing_extensions==4.11.0
